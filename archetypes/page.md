@@ -2,7 +2,7 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 categories:
-- 阅读
+- 收件箱
 - 记录
 tags:
 - 阅读
