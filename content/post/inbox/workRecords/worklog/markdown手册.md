@@ -62,3 +62,14 @@ makrdown 手册记录
 markdown兼容html的合并单元格
 
 ```
+## 思维导图
+```
+ \```mermaid
+            graph TD
+
+            A[Client] -->|tcp_123| B
+            B(Load Balancer)
+            B -->|tcp_456| C[Server1]
+            B -->|tcp_456| D[Server2]
+ \```
+```

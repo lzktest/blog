@@ -392,3 +392,10 @@ dateFormat = "2006-01-02"
   theme = "github-light"
 
 
+[server]
+[[server.headers]]
+    for = '/**'
+    [server.headers.values]
+      Access-Control-Allow-Origin = "*"
+      Access-Control-Allow-Methods = "POST, GET, OPTIONS, DELETE, PUT"
+      Access-Control-Allow-Headers = "Content-Type,Access-Token,Authorization,ybg"
