@@ -83,3 +83,8 @@ docker pull ubuntu
 在 Mac 上的配置类似。  
 ##### 注意：
 在 Docker Desktop for Windows 中，还需要确保 Docker Daemon 正在运行，并已经启用了“Expose daemon on tcp://localhost:2375 without TLS”选项。可以在 Docker 设置的“General”选项卡中勾选该选项。
+
+
+## 参考
+
+[Docker国内镜像源列表](https://blog.csdn.net/sxf1061700625/article/details/140895299)
