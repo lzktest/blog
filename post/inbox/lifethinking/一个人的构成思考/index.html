@@ -273,15 +273,12 @@
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <h2 id="对一个人的构成思考">对一个人的构成思考</h2>
-<p>定义： 目前普适定义为“人类”，人类这一物种的简化。<br>
-纵向维度:</p>
+<p>定义： 目前普适定义为“人类”，人类这一物种的简化。</p>
+<p>纵向维度:</p>
 <ol>
-<li>拥有一份工作</li>
-<li>从菜鸟到大师</li>
-<li></li>
-</ol>
-<p>在当今社会中，人有以下属性：</p>
-<ol>
+<li>一级成长曲线(作为主线)</li>
+<li>二级成长曲线(作为次级补充)
+在当今社会中，人有以下属性：</li>
 <li>人生目标:
 <ul>
 <li>5年愿景</li>
@@ -312,10 +309,21 @@
 </ul>
 </li>
 </ol>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid"> graph TD
-            A[Client] --&gt; B[Load Balancer]
-            B --&gt; C[Server1]
-            B --&gt; D[Server2]
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">            graph TD
+
+            A[人] --&gt;B1[物质]
+            A --&gt;|tcp_456| B2[精神]
+            B1 --&gt; c11[个人] --&gt; d111[经济独立]
+            B1 --&gt; c12[家庭] --&gt; d121[家庭小康]
+            B1 --&gt; c13[家族] --&gt; d131[家族飞轮]
+            B2 --&gt;|tcp_456| c21[内部]
+            c21 --&gt; d211[自我]
+            c21 --&gt; d212[人生目标]
+            B2 --&gt; c22[外部]
+            c22 --&gt; d221[个人期望]
+            c22 --&gt; d222[父母期望]
+            c22 --&gt; d223[家庭期望]
+            c22 --&gt; d224[朋友期望]
 </code></pre>
               
 
@@ -345,7 +353,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://tianyuliufang233.github.io/blog/post/area/lifehacks/%E7%A0%B4%E5%86%B0%E5%B0%8F%E6%B8%B8%E6%88%8F/" data-tooltip="破冰小游戏" aria-label="下一篇: 破冰小游戏">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -434,7 +442,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://tianyuliufang233.github.io/blog/post/area/lifehacks/%E7%A0%B4%E5%86%B0%E5%B0%8F%E6%B8%B8%E6%88%8F/" data-tooltip="破冰小游戏" aria-label="下一篇: 破冰小游戏">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -590,9 +598,10 @@ $(document).ready(function() {
 
   
 <script type="module">  
-    import mermaid from 'https://cdn.staticfile.org/mermaid/10.2.4/mermaid.esm.min.mjs'; 
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+    
     mermaid.initialize({ startOnLoad: true });  
-</script>  
+</script>
 <script>  
     
     Array.from(document.getElementsByClassName("language-mermaid")).forEach(  
