@@ -513,6 +513,9 @@ display radio-5g-profile all  查看5g模板
 display air-scan-profile name default 查看模板名为default的模板内容
 display ip pool interface Vlanif1 查看ip池分配情况
 
+display smart-policy-route load-balance-mode select-path-result，查看负载分担模式下流量的选路结果。
+display smart-policy-route physical-interface，查看物理接口的相关信息。
+
 AC-BE: 尽力而为流量队列
 AC-BK：后台流量队列
 Wireless frames(RX): 无线侧接收空口数据帧和管理帧总数
@@ -573,7 +576,17 @@ WMM AC_VO PER(%): WMM队列中AC_VO类别报文的丢包率。
 [Huawei] snmp-agent sys-info version v2c
 [Huawei] snmp-agent mib-view dnsmib include 1.3.6.1.4.1.2011.5.25.194
 [Huawei] snmp-agent server-source -i loopback 0
-</code></pre><h2 id="配置snmpv1">配置snmpv1</h2>
+</code></pre><h2 id="非等价负载分担功能">非等价负载分担功能</h2>
+<pre tabindex="0"><code>system-view
+interface interface-type interface-number [.subinterface-number ] 
+load-balance bandwidth bandwidth，手动配置当前接口的带宽。
+load-balance unequal-cost enable，使能当前接口非等价负载分担功能。
+shutdown，关闭当前接口。
+undo shutdown，开启当前接口。
+quit，退出接口视图
+只有当所有等价链路的出接口都使能UCMP功能，且触发了FIB表项重新下发（先后执行命令shutdown和undo shutdown）后，各等价链路才在设备上进行非等价负载分担。如果其中任一接口没有使能UCMP功能，即使触发了FIB表项重新下发，各等价链路仍进行等价负载分担。
+</code></pre><p><a href="https://support.huawei.com/enterprise/zh/doc/EDOC1100320897/f19d5a22">配置非等价负载分担功能</a></p>
+<h2 id="配置snmpv1">配置snmpv1</h2>
 <p><a href="https://support.huawei.com/enterprise/zh/doc/EDOC1100332363/b7ca8f82">官方文档</a>
 <a href="https://support.huawei.com/enterprise/zh/doc/EDOC1100332363/d3a64a86">案例</a></p>
 <h2 id="配置snmpv2">配置snmpv2</h2>
